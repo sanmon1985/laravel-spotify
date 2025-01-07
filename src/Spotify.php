@@ -283,6 +283,7 @@ class Spotify
         $acceptedParams = [
             'fields' => null,
             'market' => $this->defaultConfig['market'],
+            'locale' => $this->defaultConfig['locale'],
         ];
 
         return new PendingRequest($endpoint, $acceptedParams);
@@ -300,6 +301,7 @@ class Spotify
             'limit' => null,
             'offset' => null,
             'market' => $this->defaultConfig['market'],
+            'locale' => $this->defaultConfig['locale'],
         ];
 
         return new PendingRequest($endpoint, $acceptedParams);
@@ -318,6 +320,7 @@ class Spotify
             'q' => $query,
             'type' => Validator::validateArgument('type', $type),
             'market' => $this->defaultConfig['market'],
+            'locale' => $this->defaultConfig['locale'],
             'limit' => null,
             'offset' => null,
             'include_external' => null,
@@ -337,6 +340,7 @@ class Spotify
             'q' => $query,
             'type' => 'album',
             'market' => $this->defaultConfig['market'],
+            'locale' => $this->defaultConfig['locale'],
             'limit' => null,
             'offset' => null,
             'include_external' => null,
