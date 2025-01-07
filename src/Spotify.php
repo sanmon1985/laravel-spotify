@@ -390,7 +390,7 @@ class Spotify
     /**
      * Get Spotify Catalog information about playlists that match a keyword string.
      */
-    public function searchPlaylists(string $query): PendingRequest
+    public function searchPlaylists(string $query, ?int $limit = null, ?int $offset = null): PendingRequest
     {
         $endpoint = '/search/';
 
@@ -398,8 +398,8 @@ class Spotify
             'q' => $query,
             'type' => 'playlist',
             'market' => $this->defaultConfig['market'],
-            'limit' => null,
-            'offset' => null,
+            'limit' => $limit,
+            'offset' => $offset,
             'include_external' => null,
         ];
 
